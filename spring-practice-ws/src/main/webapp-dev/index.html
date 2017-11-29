@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl" ng-app="springPractice" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="'springPractice' | translate"></title>
+    <!-- inject:css -->
+    <!-- endinject -->
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar navbar-default" role="navigation">
+                <div ng-controller="AuthController as auth" class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <a href="#/">
+                            <img src="assets/images/logo_arimr.png" />
+                        </a>
+                        Szkolenie Spring Boot
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/">STRONA GŁÓWNA</a></li>
+                        <li ng-if="isAuthorized()"><a href="" ng-click="auth.logout()">Wyloguj <span style="text-transform: none;">({{loggedUser.user.login}})</span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<div ng-if="isAuthorized()" class="container">
+    <div class="row">
+        <div class="col-md-2">
+            <ng-include src="'app/menu.html'"/>
+        </div>
+        <div ng-view class="col-md-10" style="margin-top: 20px;"></div>
+    </div>
+</div>
+
+<div ng-if="!isAuthorized()" ng-view class="container"></div>
+
+<!--<div ng-if="!isAuthorized()" ng-view class="container"></div>-->
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center copyright">
+                <p>
+                    © <span id="copyright-year">ARiMR - Maciasz Mateusz</span><br>
+                    <!--{%FOOTER_LINK} -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- inject:js -->
+<!-- endinject -->
+
+</body>
+</html>

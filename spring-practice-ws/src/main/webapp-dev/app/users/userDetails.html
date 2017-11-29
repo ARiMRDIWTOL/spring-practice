@@ -1,0 +1,53 @@
+<div>
+    <form role="form" class="form-horizontal" ng-submit="userDetCtrl.save()">
+        <div class="form-group">
+            <label for="login" class="col-sm-2 control-label">
+                Login:
+                <span class="required">*</span>
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="login" placeholder="Login"
+                       ng-model="userDetCtrl.user.login" required/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-sm-2 control-label">
+                Imię:
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" placeholder="Adres"
+                       ng-model="userDetCtrl.user.name"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="surname" class="col-sm-2 control-label">
+                Nazwisko:
+            </label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="surname" placeholder="Kontakt"
+                       ng-model="userDetCtrl.user.surname"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="newPassword" class="col-sm-2 control-label">
+                Hasło:
+                <span class="required">*</span>
+            </label>
+            <div class="col-sm-10">
+                <input  type="password" class="form-control" id="newPassword" placeholder="Hasło" ng-model="userDetCtrl.user.newPassword"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="confirmedNewPassword" class="col-sm-2 control-label">
+                Powtórz hasło:
+                <span class="required">*</span>
+            </label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="confirmedNewPassword" placeholder="Powtórz hasło" ng-model="userDetCtrl.user.confirmedNewPassword"/>
+            </div>
+        </div>
+
+        <button class="btn btn-primary pull-left" ng-click="userDetCtrl.backToList()">Powrót</button>
+        <button type="submit" class="btn btn-primary pull-right">{{'confirm' | translate}}</button>
+    </form>
+</div>

@@ -1,0 +1,13 @@
+.idea/
+*.iml
+spring-practice-api/target/
+spring-practice-core/target/
+spring-practice-ws/target/
+test/
+spring-practice-ws/src/main/resources/static/
+spring-practice-ws/src/main/webapp-dev/bower_components/
+spring-practice-ws/src/main/webapp-dev/node_modules/
+spring-practice-ws/src/main/webapp-dev/package-lock.json
+*.db
+/spring-practice-ws/src/main/webapp-dev/node/
+/package-lock.json

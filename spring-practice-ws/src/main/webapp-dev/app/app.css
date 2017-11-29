@@ -1,0 +1,98 @@
+.text-align-right {
+    text-align: right;
+}
+
+.nav > li {
+    padding: 5px;
+}
+
+.topMenu {
+    margin: 1% auto;
+}
+
+.errorPage {
+    width: 40%;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.errorPageImage {
+    background: url("../assets/images/dunno.gif") 0 0 no-repeat;
+    width: 500px;
+    height: 282px;
+}
+
+.marginTop15 {
+    margin-top: 15px;
+}
+
+.red {
+    color: #f00;
+}
+
+.yellow {
+    color: #edac46;
+}
+
+.width3 {
+    width: 3%;
+}
+
+.width8 {
+    width: 8%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width95 {
+    width: 95%;
+}
+
+.loginForm {
+    width: 30%;
+    margin: 70px auto;
+}
+
+.contactPage {
+    width: 80%;
+    margin: 70px auto;
+    text-align: center;
+    font-size: 22px;
+}
+
+.radius5 {
+    border-radius: 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.timepicker-input {
+    width: 60px;
+    text-align: center;
+}
+
+.textarea {
+    width: 100%;
+    height: 100px;
+}
+
+.timepicker.dropdown-menu {
+    padding: 0 4px;
+}
+
+.timepicker.dropdown-menu button {
+    outline: none;
+    border: 0px;
+}
+
+.timepicker.dropdown-menu tbody button {
+    padding: 6px;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring-practice</artifactId>
+        <groupId>pl.gov.arimr</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <artifactId>spring-practice-ws</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <artifactId>spring-practice-core</artifactId>
+            <groupId>pl.gov.arimr</groupId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>spring-practice</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>com.github.eirslett</groupId>
+                <artifactId>frontend-maven-plugin</artifactId>
+                <version>1.0</version>
+
+                <configuration>
+                    <npmVersion>5.0.3</npmVersion>
+                    <nodeVersion>v8.1.3</nodeVersion>
+                    <workingDirectory>src/main/webapp-dev</workingDirectory>
+                    <installDirectory>src/main/webapp-dev</installDirectory>
+                    <downloadRoot>https://repo.di.arimr.gov.pl/artifactory/api/npm/npm-virtual/</downloadRoot>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>install node and npm</id>
+                        <goals>
+                            <goal>install-node-and-npm</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>npm install</id>
+                        <goals>
+                            <goal>npm</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>install</arguments>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>gulp build</id>
+                        <goals>
+                            <goal>gulp</goal>
+                        </goals>
+                        <configuration>
+                            <arguments>${gulp.default.task}</arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+
+    </build>
+</project>
